@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "author": "Kato Shinya",
+    "since": "1.0",
+    "version": "1.0",
+    "creationDate": "2020/10/13",
+    "encoding": "UTF-8",
+    "description": "プラットフォーム毎の既定出力先を管理するコンテンツです。"
+  },
+
+  "selectionNodes": [
+    {
+      "node": {
+        "conditionId": "0",
+        "環境変数名": "USERPROFILE",
+        "出力先ディレクトリ": "desktop"
+      }
+    },
+
+    {
+      "node": {
+        "conditionId": "1",
+        "環境変数名": "HOME",
+        "出力先ディレクトリ": "desktop"
+      }
+    },
+
+    {
+      "node": {
+        "conditionId": "2",
+        "環境変数名": "HOME",
+        "出力先ディレクトリ": "desktop"
+      }
+    }
+  ],
+
+  "conditionNodes": [
+    {
+      "node": {
+        "conditionId": "0",
+        "exclude": false,
+        "conditions": [
+          {
+            "keyName": "プラットフォームコード",
+            "operand": "=",
+            "value": "0"
+          }
+        ]
+      }
+    },
+
+    {
+      "node": {
+        "conditionId": "1",
+        "exclude": false,
+        "conditions": [
+          {
+            "keyName": "プラットフォームコード",
+            "operand": "=",
+            "value": "1"
+          }
+        ]
+      }
+    },
+
+    {
+      "node": {
+        "conditionId": "2",
+        "exclude": false,
+        "conditions": [
+          {
+            "keyName": "プラットフォームコード",
+            "operand": "=",
+            "value": "2"
+          }
+        ]
+      }
+    }
+  ]
+}
