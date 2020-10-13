@@ -59,6 +59,21 @@ dependencies {
     implementation 'com.google.guava:guava:28.2-jre'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.5.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-params:5.5.2'
+
+    implementation group: 'com.google.flogger', name: 'flogger', version: '0.4'
+    implementation group: 'com.google.flogger', name: 'flogger-system-backend', version: '0.4'
+
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+
+    implementation 'org.projectlombok:lombok:1.18.12'
+	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    implementation 'org.thinkit.common:dev-utils:v1.0.2'
+    implementation 'org.thinkit.framework.content:content-framework:v1.0.2'
+    implementation 'org.thinkit.api.catalog:catalog-api:v1.0.1'
+    implementation 'org.thinkit.common:precondition-validator:v1.0.8'
+    implementation 'org.thinkit.generator.common:generator-commons:v1.0.0-10-g3c865c6'
 }
 
 test {
