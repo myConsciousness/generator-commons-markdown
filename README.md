@@ -4,6 +4,51 @@
 
 Generator Commons Markdown main repository.
 
+## How To Use
+
+### 1. Add the dependencies
+
+> **_Note:_**<br>
+> Replace version you want to use. Check the latest [Packages](https://github.com/myConsciousness/generator-commons-markdown/packages).<br>
+> Please contact me for a token to download the package.
+
+**_Maven_**
+
+```xml
+<dependency>
+  <groupId>org.thinkit.generator.common.markdown</groupId>
+  <artifactId>generator-commons-markdown</artifactId>
+  <version>v1.0.0</version>
+</dependency>
+
+<servers>
+  <server>
+    <id>github</id>
+    <username>myConsciousness</username>
+    <password>xxxxxxxxxxxxxxxxxx</password>
+  </server>
+</servers>
+```
+
+**_Gradle_**
+
+```gradle
+repositories {
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/myConsciousness/generator-commons-markdown")
+        credentials {
+          username = "myConsciousness"
+          password = "xxxxxxxxxxxxxxxxxx"
+        }
+    }
+}
+
+dependencies {
+    implementation 'org.thinkit.generator.common.markdown:generator-commons-markdown:v1.0.0'
+}
+```
+
 ## License
 
 ```
