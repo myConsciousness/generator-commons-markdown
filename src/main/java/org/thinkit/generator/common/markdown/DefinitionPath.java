@@ -17,7 +17,6 @@ package org.thinkit.generator.common.markdown;
 import com.google.common.flogger.FluentLogger;
 
 import org.apache.commons.lang3.StringUtils;
-import org.checkerframework.checker.nullness.qual.NonNull;
 import org.thinkit.common.Preconditions;
 import org.thinkit.common.catalog.Platform;
 import org.thinkit.common.util.file.FluentFile;
@@ -27,6 +26,7 @@ import org.thinkit.generator.common.markdown.content.rule.DefaultOutputPathColle
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.ToString;
 
 /**
@@ -35,7 +35,7 @@ import lombok.ToString;
  * 以下の静的メソッドを呼び出すことで {@link DefinitionPath} のインスタンスを生成することができます。
  * <p>
  * {@link #of(String)} <br>
- * {@link #of(String, String)} <br>
+ * {@link #of(String, String)}
  * <p>
  * {@link DefinitionPath} のインスタンス生成時に設定されたファイルパスは<br>
  * {@link #getFilePath()} を呼び出すことで取得できます。

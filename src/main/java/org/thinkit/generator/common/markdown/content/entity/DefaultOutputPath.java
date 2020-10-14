@@ -16,11 +16,11 @@ package org.thinkit.generator.common.markdown.content.entity;
 
 import java.io.Serializable;
 
-import org.checkerframework.checker.nullness.qual.NonNull;
 import org.thinkit.framework.content.entity.ContentEntity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.ToString;
 
 /**

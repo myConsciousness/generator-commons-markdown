@@ -17,7 +17,6 @@ package org.thinkit.generator.common.markdown;
 import com.google.common.flogger.FluentLogger;
 
 import org.apache.commons.lang3.StringUtils;
-import org.checkerframework.checker.nullness.qual.NonNull;
 import org.thinkit.common.catalog.Delimiter;
 import org.thinkit.common.util.file.FluentFile;
 import org.thinkit.generator.common.Generator;
@@ -25,10 +24,12 @@ import org.thinkit.generator.common.Generator;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.ToString;
 
 /**
- * 定義書の解析処理における基底クラスです。
+ * マークダウン形式で記述された定義情報を解析し、生成物を出力する際の汎用的な処理を定義した抽象クラスです。
+ * マークダウン形式で記述された定義書からコードを生成する場合はこの抽象クラスを継承した具象クラスを実装してください。
  *
  * @author Kato Shinya
  * @since 1.0
@@ -81,8 +82,8 @@ public abstract class AbstractGenerator implements Generator {
                 return false;
             }
         } catch (Exception e) {
-            logger.atSevere().log("実行時に想定外のエラーが発生しました。");
-            logger.atSevere().log("ログを解析し原因調査と修正を行ってください。");
+            logger.atSevere().log("An unexpected exception occurred during the execution of the analysis process.");
+            logger.atSevere().log("Analyze the log and investigate and correct the cause.");
             e.printStackTrace();
             return false;
         }
@@ -109,13 +110,13 @@ public abstract class AbstractGenerator implements Generator {
     }
 
     /**
-     * パッケージ情報を付与した出力先のパスを返却します。<br>
-     * パッケージ情報はカンマ区切りの文字列として渡してください。<br>
-     * 例えば、以下のような形式で渡してください。<br>
-     * 渡されたパッケージ情報はカンマの区切り文字をプラットフォームに応じたファイルセパレータに変換し出力先パスに付与します。<br>
-     * <br>
-     * {@code "org.thinkit.generator"}<br>
-     * <br>
+     * パッケージ情報を付与した出力先のパスを返却します。
+     * <p>
+     * パッケージ情報はカンマ区切りの文字列として渡してください。 例えば、以下のような形式で渡してください。
+     * 渡されたパッケージ情報はカンマの区切り文字をプラットフォームに応じたファイルセパレータに変換し出力先パスに付与します。
+     * <p>
+     * {@code "org.thinkit.generator"}
+     * <p>
      * 引数として{@code null}が指定された場合は実行時に必ず失敗します。
      *
      * @param packageName カンマ区切りで表現されたパッケージ名

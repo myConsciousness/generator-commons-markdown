@@ -14,7 +14,6 @@
 
 package org.thinkit.generator.common.markdown.content.rule;
 
-import org.checkerframework.checker.nullness.qual.NonNull;
 import org.thinkit.common.catalog.Platform;
 import org.thinkit.framework.content.ContentInvoker;
 import org.thinkit.framework.content.rule.Rule;
@@ -22,6 +21,7 @@ import org.thinkit.generator.common.markdown.content.DefaultOutputPathLoader;
 import org.thinkit.generator.common.markdown.content.entity.DefaultOutputPath;
 
 import lombok.EqualsAndHashCode;
+import lombok.NonNull;
 import lombok.ToString;
 
 /**
